@@ -1,7 +1,7 @@
 version: "3.0"
 services:
   db:
-    image: mariadb:latest
+    image: docker.io/library/mariadb:latest
     environment: 
       - MYSQL_DATABASE=wpdb
       - MYSQL_USER=wpuser
@@ -12,7 +12,7 @@ services:
     
 
   wp:
-    image: wordpress:latest
+    image: docker.io/library/wordpress:latest
     volumes:
       - wpsite_vol:/var/www
     depends_on: 
